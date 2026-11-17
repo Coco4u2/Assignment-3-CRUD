@@ -22,13 +22,42 @@ router.get('/', async(req, res, next) => {
     }
 });
 
-// Create Operation
+/* Create/Add Operation */
 
+// Get Operation
+router.get('/add', async(req, res, next) => {
+    try {
+        res.render('Workout/add', {
+            title: 'Add Workout'
+        });
+    }
+    catch(err) {
+        console.error(err);
+        next(err);
+    }
+});
 
-// Update Operation
+// Post Operation
+router.post('/add', async (req, res, next) => {
 
+});
 
-// Delete Operation
+/* Update Operation */
+
+// Get Operation
+router.get('/edit/:id', async (req, res, next) => {
+
+});
+
+// Post Operation
+router.post('/edit/:id', async (req, res, next) => {
+
+});
+
+/* Delete Operation */
+router.get('/delete/:id', async (req, res, next) => {
+
+});
 
 
 module.exports = router;
