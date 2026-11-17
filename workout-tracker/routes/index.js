@@ -16,11 +16,6 @@ router.get('/list', function(req, res, next) {
     res.render('index', { title: 'List' });
 });
 
-/* GET add page */
-router.get('/add', function(req, res, next) {
-    res.redirect('/workouts/add');
-});
-
 /* GET edit page */
 router.get('/edit', function(req, res, next) {
     res.render('index', { title: 'Edit' });

@@ -63,7 +63,7 @@ router.get('/edit/:id', async(req, res, next) => {
         const id = req.params.id;
         const workoutToEdit = await Workout.findById(id);
 
-        res.render('edit', {
+        res.render('Workout/edit', {
             title: 'Edit Workout',
             Workout: workoutToEdit
         });

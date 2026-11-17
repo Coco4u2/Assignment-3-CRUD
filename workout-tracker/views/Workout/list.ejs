@@ -37,6 +37,17 @@
             <td class="text-center"><%= WorkoutList[count].date ? new Date(WorkoutList[count].date).toLocaleDateString() : '' %></td>
 
             <td class="text-center"><%= WorkoutList[count].notes %></td>
+
+            <td class="text-center">
+                <a href="/workouts/edit/<%= WorkoutList[count]._id %>" class="btn btn-primary">
+                    <i class="fa-solid fa-edit"></i> Edit
+                </a>
+            </td>
+            <td class="text-center">
+                <a href="/workouts/delete/<%= WorkoutList[count]._id %>" class="btn btn-danger">
+                    <i class="fa-solid fa-trash"></i> Delete
+                </a>
+            </td>
         </tr>
     <% } %>
 </tbody>
