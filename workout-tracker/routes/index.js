@@ -18,7 +18,7 @@ router.get('/list', function(req, res, next) {
 
 /* GET add page */
 router.get('/add', function(req, res, next) {
-    res.render('index', { title: 'Add' });
+    res.redirect('/workouts/add');
 });
 
 /* GET edit page */
