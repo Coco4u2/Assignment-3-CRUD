@@ -39,11 +39,40 @@ router.get('/add', async(req, res, next) => {
 
 // Post Operation
 router.post('/add', async (req, res, next) => {
+    try {
+        const newWorkout = new Workout({
+            name: req.body.name,
+            type: req.body.type,
+            duration: req.body.duration,
+            date: req.body.date,
+            notes: req.body.notes
+        });
 
+        await Workout.create(newWorkout);
+        res.redirect('/workouts');
+    }
+    catch(err) {
+        console.error(err);
+        next(err);
+    }
 });
 
 /* Update Operation */
+router.get('/edit/:id', async(req, res, next) => {
+    try {
+        const id = req.params.id;
+        const workoutToEdit = await Workout.findById(id);
 
+        res.render('edit', {
+            title: 'Edit Workout',
+            Workout: workoutToEdit
+        });
+    }
+    catch(err) {
+        console.error(err);
+        next(err);
+    }
+});
 // Get Operation
 router.get('/edit/:id', async (req, res, next) => {
 
