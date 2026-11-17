@@ -11,18 +11,18 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
   
-/* GET About me page */
-router.get('/about', function(req, res, next) {
-    res.render('index', { title: 'About' });
+/* GET list page */
+router.get('/list', function(req, res, next) {
+    res.render('index', { title: 'List' });
 });
 
-/* GET Projects page */
-router.get('/projects', function(req, res, next) {
-    res.render('index', { title: 'Projects' });
+/* GET add page */
+router.get('/add', function(req, res, next) {
+    res.render('index', { title: 'Add' });
 });
 
-/* GET Contact page */
-router.get('/contact', function(req, res, next) {
-    res.render('index', { title: 'Contact' });
+/* GET edit page */
+router.get('/edit', function(req, res, next) {
+    res.render('index', { title: 'Edit' });
 });
 module.exports = router;

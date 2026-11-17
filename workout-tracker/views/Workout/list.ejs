@@ -1,0 +1,41 @@
+<!-- Shared header and navigation -->
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/main_nav.ejs') %>>
+
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+
+            <h1><%= title %></h1>
+            <br>
+
+            <table class="table table-bordered table-striped table-hover">
+
+                <!-- Header Row -->
+                <thead>
+                    <tr>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Type</th>
+                        <th class="text-center">Duration</th>
+                        <th class="text-center">Date</th>
+                        <th class="text-center">Notes</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+    <% for(let count=0; count<WorkoutList.length; count++) { %>
+        <tr>
+            <td class="text-center"><%= WorkoutList[count].name %></td>
+            
+            <td class="text-center"><%= WorkoutList[count].type %></td>
+
+            <td class="text-center"><%= WorkoutList[count].duration %></td>
+
+            <td class="text-center"><%= WorkoutList[count].date ? new Date(WorkoutList[count].date).toLocaleDateString() : '' %></td>
+
+            <td class="text-center"><%= WorkoutList[count].notes %></td>
+        </tr>
+    <% } %>
+</tbody>
+<!-- Shared footer -->
+<%- include('../partials/footer.ejs') %>

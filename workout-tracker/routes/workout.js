@@ -9,14 +9,14 @@ router.get('/', async(req, res, next) => {
     try {
         const WorkoutList = await Workout.find();
 
-        res.render('Workouts/list', {
+        res.render('Workout/list', {
             title: 'Workouts',
             WorkoutList: WorkoutList
         });
     }
     catch(err) {
         console.log(err);
-        res.render('Workouts/list', {
+        res.render('Workout/list', {
             error: 'Error on Server'
         });
     }

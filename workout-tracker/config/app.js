@@ -37,11 +37,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 // Make Bootstrap files available
-app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules', 'bootstrap')));
+app.use('/bootstrap', express.static(path.join(__dirname, '../node_modules', 'bootstrap')));
 // Make Font Awesome files available
-app.use('/@fortawesome/fontawesome-free', express.static(path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free')));
+app.use('/@fortawesome/fontawesome-free', express.static(path.join(__dirname, '../node_modules', '@fortawesome', 'fontawesome-free')));
 
 app.use('/', indexRouter);
+app.use('/workouts', workoutRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

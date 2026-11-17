@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<!-- Shared header and navigation -->
+<%- include('partials/header.ejs') %>
+<%- include('partials/main_nav.ejs') %>
+
+<!-- Home Page -->
+<main class="container py-5">
+    <section class="text-center">
+        <h2>Welcome to Workout Tracker</h2>
+
+        <p class="lead mt-3">
+            Track and manage your daily workouts.
+            Add new workouts, view your progress,
+            and update your workout records.
+        </p>
+
+        <a href="/workouts" class="btn btn-primary mt-3">
+            <i class="fa-solid fa-dumbbell"></i>
+            View My Workouts
+        </a>
+    </section>
+</main>
+
+<!-- Shared footer -->
+<%- include('partials/footer.ejs') %>
