@@ -1,13 +1,13 @@
 const { default: mongoose } = require("mongoose");
 
 let workoutModel = mongoose.Schema({
-    name: 'Bench Press',
-    type: 'Strength',
-    duration: 45,
-    date: 2026-11-17,
-    notes: 'Chest workout'
+    name: String,
+    type: String,
+    duration: Number,
+    date: Date,
+    notes: String
 }, {
-    Collection: 'workouts'
+    collection: 'workouts'
 });
 
 module.exports = mongoose.model('Workout', workoutModel);

@@ -9,6 +9,7 @@ let logger = require('morgan');
 
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
+let workoutRouter = require('../routes/workout');
 
 let app = express();
 
@@ -27,14 +28,14 @@ mongoDB.once('open', () => {
 });
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 // Make Bootstrap files available
 app.use('/bootstrap', express.static(path.join(__dirname, 'node_modules', 'bootstrap')));
 // Make Font Awesome files available
