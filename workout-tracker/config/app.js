@@ -6,14 +6,18 @@ let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
-
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let workoutRouter = require('../routes/workout');
 
 let app = express();
 
-// mongoose setup
+// mongo DB connection
 const mongoose = require('mongoose');
 let DB = require('./database');
 
@@ -26,6 +30,16 @@ mongoDB.on('error', console.error.bind(console, 'Connection Error'));
 mongoDB.once('open', () => {
     console.log('Connected to MongoDB Atlas');
 });
+
+// Session
+app.use(session({
+    secret: "Someseret",
+    saveUninitialized: false,
+    resave: false
+}));
+
+// initialize flash
+app.use(flash());
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
