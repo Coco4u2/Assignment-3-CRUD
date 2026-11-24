@@ -3,21 +3,103 @@
 <%- include('partials/main_nav.ejs') %>
 
 <!-- Home Page -->
-<main class="container py-5">
-    <section class="text-center">
-        <h2>Welcome to Workout Tracker</h2>
+<main class="container mt-5 mb-5">
 
-        <p class="lead mt-3">
-            Track and manage your daily workouts.
-            Add new workouts, view your progress,
-            and update your workout records.
+    <!-- Hero Section -->
+    <div class="row align-items-center mb-5">
+
+        <div class="col-md-6">
+            <h1 class="display-5 fw-bold">
+                Welcome to Workout Tracker
+            </h1>
+
+            <p class="lead">
+                Take control of your fitness journey by recording,
+                managing, and tracking your daily workouts.
+            </p>
+
+            <p>
+                Stay organized, build healthy habits, and work
+                towards achieving your fitness goals.
+            </p>
+
+            <a href="/workouts" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-dumbbell"></i>
+                View My Workouts
+            </a>
+        </div>
+
+        <div class="col-md-6">
+            <img src="/Assets/images/gym.jpg"
+                class="img-fluid rounded shadow"
+                alt="Gym workout equipment">
+        </div>
+
+    </div>
+
+    <!-- Feature Section -->
+    <h2 class="text-center mb-4">What You Can Do</h2>
+
+    <div class="row text-center">
+
+        <!-- Feature 1 -->
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-dumbbell fa-3x text-primary mb-3"></i>
+
+                    <h4>Log Workouts</h4>
+
+                    <p>
+                        Record your workout name, type, duration,
+                        date, and personal notes.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-clipboard-list fa-3x text-primary mb-3"></i>
+
+                    <h4>Manage Workouts</h4>
+
+                    <p>
+                        View, update, and delete your workout
+                        records whenever needed.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-4 mb-3">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <i class="fa-solid fa-chart-line fa-3x text-primary mb-3"></i>
+
+                    <h4>Track Progress</h4>
+
+                    <p>
+                        Review your workout history and stay
+                        consistent with your fitness routine.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Motivational Quote -->
+    <div class="bg-light rounded text-center p-4 mt-4 mb-5">
+        <h4>Consistency is the key to progress.</h4>
+        <p class="mb-0">
+            Every workout brings you one step closer to your goals.
         </p>
+    </div>
 
-        <a href="/workouts" class="btn btn-primary mt-3">
-            <i class="fa-solid fa-dumbbell"></i>
-            View My Workouts
-        </a>
-    </section>
 </main>
 
 <!-- Shared footer -->

@@ -16,8 +16,4 @@ router.get('/list', function(req, res, next) {
     res.render('index', { title: 'List' });
 });
 
-/* GET edit page */
-router.get('/edit', function(req, res, next) {
-    res.render('index', { title: 'Edit' });
-});
 module.exports = router;
