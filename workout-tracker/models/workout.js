@@ -1,3 +1,4 @@
+//<!-- workout model --!>//
 const { default: mongoose } = require("mongoose");
 
 let workoutModel = mongoose.Schema({

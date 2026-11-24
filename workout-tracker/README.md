@@ -9,6 +9,6 @@ MongoDB Atlas, and Mongoose.
 - View workouts
 - Edit workouts
 - Delete workouts
-
+- Database usage to store information of workouts
 ## References
 CRUD Lecture made by Mr Ahmed
